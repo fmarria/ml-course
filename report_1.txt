@@ -1,0 +1,138 @@
+\documentclass[a4paper, 25pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usepackage{amscd}
+\usepackage[inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{epigraph}
+\usepackage{icomma}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[unicode, pdftex]{hyperref}
+\captionsetup[figure]{name=рис. }
+\pgfplotsset{compat=1.18, width=12cm}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand\normalsize{\sloppypar}
+\setlength{\topmargin}{-0.5in} 
+\setlength{\textheight}{9.1in}
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\textwidth}{7in}
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{1ex}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\usepackage{amsfonts} % Required for inserting images
+
+\title{\vspace{-3cm}\textbf{\Large Федеральное государственное автономное образовательное учреждение высшего образования}\vspace{0.5cm}\\
+\textbf{\Large Национальный исследовательский университет ИТМО}\vspace{2cm}\\
+{Факультет систем управления и робототехники}\vspace{2cm}\\
+\textbf{\Huge Лабораторная работа №0 (вводная).}\vspace{0.5cm}\\
+{\Large Поток}\vspace{MO 1.2R}}\\
+\author{Федорова М.В., группа R3338}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Задание 1}
+Цель: поразмышлять о своих целях и задачах на текущий семестр\\
+\begin{itemize}
+    \item С помощью веб-интерфейса GitHub создайте файл goals.md в своем репозитории.
+    \item Используя язык разметки markdown, создайте заголовки "Мой опыт" и "Мои цели".
+    \item Напишите один абзац (1-5 предложений) о своем опыте по разработке программного обеспечения. Добавьте работающую ссылку в написанный текст (например, на ваш профиль в GitHub).
+    \item Создайте нумерованный список из 2 или 3 целей, которых планируете достичь в рамках данного курса.
+    \item Создайте ненумерованный список из 3-9 задач, над которыми собираетесь работать в рамках данного курса для достижения поставленных целей.
+    \item Создайте папку resources в корне репозитория. Загрузите в эту папку изображение (.png/.jpg/.jpeg) и добавьте его в ваш .md файл.
+Не забудьте закоммитить файлы в свой репозиторий на GitHub.
+    \item Проверьте, что созданный .md файл отформатирован и отображается при предпросмотре именно так, как планировалось.
+\end{itemize}
+
+\section*{Результаты выполнения задания}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{задание1.png} 
+    \caption{Результат выполнения задания 1}
+   \label{fig:fig01}
+\end{figure}
+
+
+\subsection*{Содержимое goals.md}
+\begin{verbatim}
+# Мой опыт
+Я студентка 3 курса факультета "Систем управления и робототехники". ...
+\end{verbatim}
+
+\section*{Задание 2}
+Цель: научиться использовать git из командной строки
+\begin{itemize}
+    \item Ознакомьтесь с инструкцией по работе с git и github из командной строки.
+    \item Клонируйте свой репозиторий на локальный компьютер используя команду git clone <ссылка на ваш репозиторий> из командной строки.
+    \item Создайте новый файл info.md в своей локальной копии репозитория. Запишите в этот файл свое ФИО (полностью), название используемой операционной системы, текущие дату и время, - каждый элемент с новой строки (всего получится 3 строки).
+    \item Выполните команды git add info.md и git commit в командной строке. Введите краткое описание коммита.
+    \item Выполните команду git push.
+    \item Создайте папку data в корне репозитория и в ней файл dataset.csv. Создайте файл .gitignore, в который добавьте строку data/. Далее закоммитьте .gitignore и попробуйте закоммитить data/dataset.csv, после чего отправьте коммиты в репозиторий на github.com с помщью git push. Объясните полученный результат в отчёте.
+\end{itemize}
+
+\subsection*{Содержимое info.md}
+\begin{verbatim}
+Мария Фёдорова
+Windows
+2025-04-05 15:00
+\end{verbatim}
+
+\subsection*{Содержимое .gitignore}
+\begin{verbatim}
+data/
+\end{verbatim}
+
+\section*{Результаты выполнения задания}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{задание2.png} 
+    \caption{Результат выполнения задания 2}
+   \label{fig:fig01}
+\end{figure}
+
+\subsection*{Объяснение попытки закоммитить data/dataset.csv}
+Попытка добавить файл \texttt{data/dataset.csv} была отклонена, потому что папка \texttt{data/} указана в \texttt{.gitignore}. Git игнорирует все файлы внутри этой папки, чтобы предотвратить случайное добавление больших данных в репозиторий.
+
+\section*{Вывод}
+
+Эта работа помогла мне освоить Git и GitHub на практике - от создания репозитория до управления файлами через терминал. Я научилась оформлять цели в \texttt{goals.md}, использовать \texttt{.gitignore}, чтобы не захламлять репозиторий, и поняла, как важно структурировать проекты с самого начала. 
+\end{document}
